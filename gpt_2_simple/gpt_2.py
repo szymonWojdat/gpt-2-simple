@@ -311,7 +311,9 @@ def finetune(sess,
     if overwrite and restore_from == 'latest':
         for file in files:
             if file.startswith('model') or file.startswith('events'):
-                os.remove(os.path.join(checkpoint_path, file))
+                file_abspath = os.path.join(checkpoint_path, file)
+                open(file_abspath, 'w').close()  # decrease file size to 0 since on GDrive it gets moved to trash instead of deleted
+                os.remove(file_abspath)
         save()
 
     avg_loss = (0.0, 0.0)
