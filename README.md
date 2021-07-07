@@ -1,6 +1,6 @@
 # Read this first
 
-This is my personal fork of https://github.com/minimaxir/gpt-2-simple. The only difference is that before removing model files it sets their size to zero, which prevents Google Drive from cloging up (free space is 15 GB while a model can take up to 6 GB, depending on which version you use). Removing model files happens when you run `gpt_2_simple.finetune(..., restore_from='latest', overwrite=True, ...)`. My change: https://github.com/szymonWojdat/gpt-2-simple/commit/4b528e73255232d13e0ea13ffa06455aa9545e3b
+This is my personal fork of https://github.com/minimaxir/gpt-2-simple. The only difference is that before removing model files it sets their size to zero, which prevents Google Drive from cloging up (free space is 15 GB while a model can take up to 6 GB, depending on which version you use). Removing model files happens when you run `gpt_2_simple.finetune(..., restore_from='latest', overwrite=True, ...)`.
 
 Have fun,
 
