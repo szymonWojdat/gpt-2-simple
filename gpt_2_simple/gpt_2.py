@@ -316,9 +316,6 @@ def finetune(sess,
     def sample_batch():
         return [data_sampler.sample(1024) for _ in range(batch_size)]
 
-    if overwrite and restore_from == 'latest':
-        save()
-
     avg_loss = (0.0, 0.0)
     start_time = time.time()
 
